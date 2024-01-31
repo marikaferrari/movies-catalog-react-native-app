@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Bars3CenterLeftIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import { StatusBar } from 'expo-status-bar';
+import { styles } from '../theme';
+import TrendingMovies from '../components/trendingMovies';
 
 export default function HomeScreen() {
   const ios = Platform.OS === 'ios';
@@ -14,12 +16,22 @@ export default function HomeScreen() {
         <StatusBar style="light" />
         <View className="flex-row justify-between items-center mx-4">
           <Bars3CenterLeftIcon size="30" strokeWidth={2} color="white" />
-          <Text className="text-white text-3xl font-bold">Movies</Text>
+          <Text className="text-white text-3xl font-bold">
+            <Text style={styles.text}>M</Text>ovies
+          </Text>
           <TouchableOpacity>
             <MagnifyingGlassIcon size="30" strokeWidth={2} color="white" />
           </TouchableOpacity>
         </View>
       </SafeAreaView>
+
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 10 }}
+      >
+        {/* trending movies carousel */}
+        <TrendingMovies data={''} />
+      </ScrollView>
     </View>
   );
 }
