@@ -1,1 +1,0 @@
-# movies-catalog-react-native-app
