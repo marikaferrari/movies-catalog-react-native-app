@@ -14,7 +14,10 @@ export default function HomeScreen() {
         <StatusBar style="light" />
         <View className="flex-row justify-between items-center mx-4">
           <Bars3CenterLeftIcon size="30" strokeWidth={2} color="white" />
-          <Text className="text-white text-3xl font-bold">Hello</Text>
+          <Text className="text-white text-3xl font-bold">Movies</Text>
+          <TouchableOpacity>
+            <MagnifyingGlassIcon size="30" strokeWidth={2} color="white" />
+          </TouchableOpacity>
         </View>
       </SafeAreaView>
     </View>
