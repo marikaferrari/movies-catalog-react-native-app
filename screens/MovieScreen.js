@@ -51,7 +51,10 @@ export default function MovieScreen() {
           </TouchableOpacity>
         </SafeAreaView>
         <View>
-          <Image source={require('../assets/arche.jpg')} style={{ width, height: height * 0.55 }} />
+          <Image
+            source={require('../assets/poorthings.webp')}
+            style={{ width, height: height * 0.55 }}
+          />
           <LinearGradient
             colors={['transparent', 'rgba(23, 23, 23, 0.8)', 'rgba(23, 23, 23, 1)']}
             style={{ width, height: height * 0.4 }}

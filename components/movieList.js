@@ -23,7 +23,7 @@ const MovieList = ({ title, hideSeeAll, data }) => {
         <Text className="text-white text-lg">{title}</Text>
         {!hideSeeAll && (
           <TouchableOpacity>
-            <Text style={styles.text} className="text-lg">
+            <Text style={styles.text} className="text-lg font-bold">
               See All
             </Text>
           </TouchableOpacity>
@@ -39,8 +39,7 @@ const MovieList = ({ title, hideSeeAll, data }) => {
           <TouchableWithoutFeedback key={index} onPress={() => navigation.push('Movie', item)}>
             <View style={ViewPropTypes.style} className="space-y-1 mr-4">
               <Image
-                // source={require('../assets/images/moviePoster2.png')}
-                source={require('../assets/arche.jpg')}
+                source={require('../assets/favourite.webp')}
                 className="rounded-3xl"
                 style={{ width: width * 0.33, height: height * 0.22 }}
               />

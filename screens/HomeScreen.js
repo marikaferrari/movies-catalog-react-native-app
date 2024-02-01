@@ -1,5 +1,5 @@
 import { ViewPropTypes } from 'deprecated-react-native-prop-types';
-import { View, Text, TouchableOpacity, ScrollView, Platform } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, Platform, Image } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Bars3CenterLeftIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline';
@@ -33,9 +33,12 @@ export default function HomeScreen() {
         <StatusBar style="light" />
         <View className="flex-row justify-between items-center mx-4">
           <Bars3CenterLeftIcon size="30" strokeWidth={2} color="white" />
-          <Text className="text-white text-3xl font-bold">
-            <Text style={styles.text}>M</Text>ovies
-          </Text>
+          <View className="flex flex-row">
+            <Text className="text-white text-2xl font-bold">
+              <Text style={styles.text}>B</Text>ubbleGum<Text style={styles.text}>V</Text>ault
+            </Text>
+            <Image source={require('../assets/bubble.png')} className="h-4 w-4" />
+          </View>
           <TouchableOpacity>
             <MagnifyingGlassIcon size="30" strokeWidth={2} color="white" />
           </TouchableOpacity>

@@ -31,7 +31,7 @@ const MovieCard = ({ item, handleClick }) => {
   return (
     <TouchableWithoutFeedback onPress={() => handleClick(item)}>
       <Image
-        source={require('../assets/arche.jpg')}
+        source={require('../assets/poorthings.webp')}
         style={{
           width: width * 0.6,
           height: height * 0.4,
