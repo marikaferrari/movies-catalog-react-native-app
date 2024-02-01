@@ -5,6 +5,7 @@ import { Bars3CenterLeftIcon, MagnifyingGlassIcon } from 'react-native-heroicons
 import { StatusBar } from 'expo-status-bar';
 import { styles } from '../theme';
 import TrendingMovies from '../components/trendingMovies';
+import MovieList from '../components/movieList';
 
 // declare variable to fix styling between platforms
 const ios = Platform.OS === 'ios';
@@ -12,6 +13,12 @@ const ios = Platform.OS === 'ios';
 export default function HomeScreen() {
   // state for changing trending movies
   const [trending, setTrending] = useState([1, 2, 3]);
+
+  // state for upcoming movies
+  const [upcoming, setUpcoming] = useState([1, 2, 3]);
+
+  // state for top rated movies
+  const [topRated, setTopRated] = useState([1, 2, 3]);
 
   return (
     <View className="flex-1 bg-black">
@@ -35,6 +42,9 @@ export default function HomeScreen() {
       >
         {/* trending movies carousel */}
         <TrendingMovies data={trending} />
+
+        {/* upcoming movies row */}
+        <MovieList title="Upcoming" data={upcoming} />
       </ScrollView>
     </View>
   );
