@@ -26,6 +26,7 @@ export default function MovieScreen() {
   const navigation = useNavigation();
   const [isFavourite, toggleFavourite] = useState(false);
   const [cast, setCast] = useState([]);
+  const [similarMovies, setSimilarMovies] = useState([]);
 
   return (
     <ScrollView contentContainerStyle={{ paddingBottom: 20 }} className="flex-1 bg-neutral-900">
@@ -86,6 +87,10 @@ export default function MovieScreen() {
 
       {/* cast */}
       <Cast navigation={navigation} cast={cast} />
+
+      {/* similar movies section */}
+
+      <MovieList title="Similar Movies" hideSeeAll={true} data={similarMovies} />
     </ScrollView>
   );
 }
