@@ -1,3 +1,5 @@
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
+
 import {
   View,
   Text,
@@ -29,7 +31,11 @@ export default function MovieScreen() {
   const [similarMovies, setSimilarMovies] = useState([]);
 
   return (
-    <ScrollView contentContainerStyle={{ paddingBottom: 20 }} className="flex-1 bg-neutral-900">
+    <ScrollView
+      contentContainerStyle={{ paddingBottom: 20 }}
+      style={ViewPropTypes.style}
+      className="flex-1 bg-neutral-900"
+    >
       {/* back button and movie poster */}
       <View className="w-full ">
         <SafeAreaView className="absolute z-20 w-full flex-row justify-between items-center px-4 ">

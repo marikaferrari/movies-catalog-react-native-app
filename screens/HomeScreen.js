@@ -1,3 +1,4 @@
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 import { View, Text, TouchableOpacity, ScrollView, Platform } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -21,7 +22,12 @@ export default function HomeScreen() {
   const [topRated, setTopRated] = useState([1, 2, 3]);
 
   return (
-    <View className="flex-1 bg-black">
+    <ScrollView
+      style={ViewPropTypes.style}
+      className="flex-1 bg-black"
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{ paddingBottom: 10 }}
+    >
       {/* search bar and logo */}
       <SafeAreaView className={ios ? '-mb-2' : 'mb-3'}>
         <StatusBar style="light" />
@@ -49,6 +55,6 @@ export default function HomeScreen() {
         {/* top rated movies row */}
         <MovieList title="Top Rated" data={topRated} />
       </ScrollView>
-    </View>
+    </ScrollView>
   );
 }
